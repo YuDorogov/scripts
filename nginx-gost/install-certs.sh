@@ -7,11 +7,11 @@ then
 	certname=$1
 fi
 
-/opt/cprocsp/bin/amd64/certmgr -list | grep 'HDIMAGE\\\\ngxtest'
+/opt/cprocsp/bin/amd64/certmgr -list | grep 'HDIMAGE\\\\srvtest'
 
 if [ $? -eq 0 ]
 then
-	/opt/cprocsp/bin/amd64/certmgr -delete -container '\\.\HDIMAGE\ngxtest'
+	/opt/cprocsp/bin/amd64/certmgr -delete -container '\\.\HDIMAGE\srvtest'
 fi
 
 # Генерация тестового сертефиката:
