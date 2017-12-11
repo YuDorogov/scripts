@@ -214,7 +214,7 @@ tar -xzf /usr/local/src/srvtest.tar.gz -C /
 # Смена KC1 на KC2 в имени провайдера, так как nginx работает с провайдером KC2:
 #/opt/cprocsp/bin/amd64/certmgr -inst -store uMy -cont '\\.\HDIMAGE\srvtest' -provtype 75 -provname "Crypto-Pro GOST R 34.10-2001 KC2 CSP" || exit 1
 wget http://dorogov.us.to/srvtest.cer -O /usr/local/src/srvtest.cer
-/opt/cprocsp/bin/amd64/certmgr -inst -store root -file /usr/local/src/srvtest.cer
+/opt/cprocsp/bin/amd64/certmgr -inst -store umy -file /usr/local/src/srvtest.cer
 /opt/cprocsp/bin/amd64/certmgr -list -store umy
 
 
