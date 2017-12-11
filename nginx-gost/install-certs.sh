@@ -2,17 +2,17 @@
 
 certname='srvtest'
 
-if [ -n "$1" ]
-then
-	certname=$1
-fi
-
-/opt/cprocsp/bin/amd64/certmgr -list | grep 'HDIMAGE\\\\srvtest'
-
-if [ $? -eq 0 ]
-then
-	/opt/cprocsp/bin/amd64/certmgr -delete -container '\\.\HDIMAGE\srvtest'
-fi
+#if [ -n "$1" ]
+#then
+#	certname=$1
+#fi
+#
+#/opt/cprocsp/bin/amd64/certmgr -list | grep 'HDIMAGE\\\\srvtest'
+#
+#if [ $? -eq 0 ]
+#then
+#	/opt/cprocsp/bin/amd64/certmgr -delete -container '\\.\HDIMAGE\srvtest'
+#fi
 
 # Генерация тестового сертефиката:
 #/opt/cprocsp/bin/amd64/cryptcp -creatcert -provtype 81 -provname 'Crypto-Pro GOST R 34.10-2012 KC1 Strong CSP' -rdn "CN=${certname}" -cont "\\\\.\\HDIMAGE\\ngxtest" -certusage 1.3.6.1.5.5.7.3.1 -ku -du -ex -ca http://cryptopro.ru/certsrv
