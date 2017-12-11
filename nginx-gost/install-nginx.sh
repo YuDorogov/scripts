@@ -9,22 +9,22 @@ certname='srvtest'
 revision_openssl="164682"
 pcre_ver="pcre-8.41"
 zlib_ver="zlib-1.2.11"
-
+csp=/usr/local/src/linux-amd64.tgz
 # Версия nginx для загрузки с github
 nginx_branch="stable-1.12"
 no_exec=false
 
-if [ -n "$1" ] 
-then
-    if [ "$1" == "command_list" ]
-    then
-        no_exec=true
-    fi
-    csp=$1
-else
-    printf "No argument (CSP)"
-    exit 0
-fi
+#if [ -n "$1" ] 
+#then
+#    if [ "$1" == "command_list" ]
+#    then
+#        no_exec=true
+#    fi
+#    csp=$1
+#else
+#    printf "No argument (CSP)"
+#    exit 0
+#fi
 
 cat /etc/*release* | grep -Ei "(centos|red hat)"
 if [ "$?" -eq 0 ] 
